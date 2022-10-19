@@ -1,12 +1,13 @@
 
 body{
-    height: 100vh;
+    height: 1000vh;
 }
 header{
+    position: sticky;
+    top: 0;
+    width: 100%;
     display: flex;
-    position: fixed;
     align-items: center;
-    position: static;
     justify-content: space-between;
     padding-bottom: 10px;
     border-bottom: 3px solid #E0DADA;
@@ -108,7 +109,8 @@ header{
 }
 
 /*Campo de postagens*/
-section{
+#timeline{
+    display: flex;
     margin: 50px;
     display: flex;
     justify-content: center;

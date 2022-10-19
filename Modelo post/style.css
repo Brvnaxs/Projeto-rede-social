@@ -3,43 +3,48 @@ body{
     height: 100vh;
     justify-content: center;
     align-items: center;
+    background-color: #FDABB5;
 }
 .post{
+    display: flex;
     width: 557px;
     height: 720px;
     background-color: rgba(255, 255, 255, 0.5);
     border-radius: 23px;
 
 }
-.user img{
+.userPhoto{
     height: 91px;
     width: 91px;
     border-radius: 91px;
     border: 3px solid #FDABB5;
+    align-self: flex-start;
+    margin-top: 30px;
+    margin-left: 20px;
 }
-.user{
-    display: flex;
-    padding-left: 15px;
-    padding-top: 20px;
-    align-items: center;
-}
-.user h1{
+
+.userNickname{
     padding-left: 20px;
     font-family: 'Kanit', sans-serif;
     font-size: 15px;
+    align-self: flex-start;
+    margin-top: 60px;
 }
-.user p{
+.postOpitions{
     color: #FDABB5;
     font-size: 40px;
-    padding-bottom: 20px;
     margin-left: 250px;
+    background-color: none;
+    border: none;
+    align-self: flex-start;
+    margin-top: 40px;
 }
-.post_content img{
+.postPhoto{
     width: 557px;
     height: 420px;
-    
+    align-self: center;
 }
-.buttons img{
+.buttons{
     height: 37.88px;
     width: 35px;
     padding-right: 5px;
@@ -49,7 +54,7 @@ body{
     display: flex;
     justify-content: flex-end;
 }
-.post_content p{
+.post p{
     font-size: 15px;
     font-family: 'Kanit', sans-serif;
     padding-left: 5px;
