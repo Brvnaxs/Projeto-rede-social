@@ -9,6 +9,9 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Alumni+Sans+Pinstripe&family=Kanit&family=Raleway:wght@500&display=swap');
    </style>
+   <!-- Include jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.js">
+</script>
     <title> THE BALLOON</title>
 </head>
 <body background="./src/background_img.png">
@@ -31,25 +34,25 @@
         </div>
         <!--FIM PERFIL-->
     </header>
-    <div id="timeline">
+    <section id="timeline">
         <div class="post">
-            <div class="user">
-                <img src="src/Pigmeu.jpg" alt="">
-                <h1>@Baby_Hipo</h1>
-                <p>...</p>
+                <section class="headerPost">
+                <img class="fotoUsuario" src="src/Pigmeu.jpg" alt="">
+                <h1 class="nomeUsuario">@Baby_Hipo</h1>
+                <button class="botao">...</button>
+                </section>
+                <img class="fotoPost" src="src/Mae&filho.png" alt="">
+                <section class="botoes">
+                <button class="botao"><img src="src/like.png" alt=""></button>
+                <button class="botao"><img src="src/coment.png" alt=""></button>
+                <button class="botao"><img src="src/send.png" alt=""></button>
+                </section>
+                <section class="areaTexto">
+                <p class="nomeUsuario">@Baby_Hipo</p>
+                <p class="textoPost">Me and mommy 💕💕</p>
+                </section>
             </div>
-            <div class="post_content">
-                <img src="src/Mae&filho.png" alt="">
-                <div class="buttons">
-                <img src="src/balloon.png" alt="">
-                <img src="src/comentario.png" alt="">
-                <img src="src/compartilha.png" alt="">
-                </div>
-                <p>@Baby_Hipo</p>
-                <p>Me and mommy 💕💕</p>
-            </div>
-        
-            </div>
-        </div>
+    </section>
+    <script src="app.js"></script>
 </body>
 </html>
