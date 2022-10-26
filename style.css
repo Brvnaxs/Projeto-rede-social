@@ -1,6 +1,6 @@
 
 body{
-    height: 100vh;
+    height: 100%;
     display: flex;
     flex-direction: column;
     background-attachment: fixed;
@@ -9,7 +9,7 @@ body{
 header{
     position: sticky;
     top: 0;
-    height: 80px;
+    height: 54px;
     width: 100%;
     display: flex;
     align-items: center;
@@ -35,7 +35,7 @@ header{
     font-size: 24px;
 }
 .search input{
-    height: 60px;
+    height: 40px;
     width: 200px;
     border-radius: 300px;
     border: none;
@@ -53,8 +53,8 @@ header{
 .perfil{
     display: flex;
     flex-direction: row;
-    color: #FDABB5;
-    font-size: 19px;
+    color: #E70073;
+    font-size: 15px;
     font-family: 'Kanit', sans-serif;
     
 }
@@ -72,8 +72,8 @@ header{
 .post{
     display: flex;
     flex-direction: column;
-    width: 550px;
-    height: 550px;
+    width: 450px;
+    height: fit-content;
     background-color: rgba(255, 255, 255, 0.5);
     border-radius: 23px;
     margin-bottom: 2%;
@@ -87,7 +87,7 @@ header{
 }
 .nomeUsuario{
     font-family: 'Kanit', sans-serif;
-    font-size: 20px;
+    font-size: 15px;
 }
 
 .fotoPost{
