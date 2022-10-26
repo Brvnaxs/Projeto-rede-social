@@ -47,31 +47,58 @@
 
 //novo teste:
 const timeline = document.querySelector('#timeline')
-const nm = document.createTextNode("@novo.user")
-//timeline.append('<div class="post">'+'<section class="headerPost">'+'<img class="fotoUsuario" src="src/Pigmeu.jpg" alt="">'+'<h1 class="nomeUsuario">'+nm+'</h1>'+'<button class="botao">...</button>'+'</section>'+'<img class="fotoPost" src="src/Mae&filho.png" alt="">'+'<section class="botoes">'+'<button class="botao"><img src="src/like.png" alt=""></button>'+'<button class="botao"><img src="src/coment.png" alt=""></button>'+'<button class="botao"><img src="src/send.png" alt=""></button>'+'</section>'+'<section class="areaTexto">'+'<p class="nomeUsuario">@Baby_Hipo</p>'+'<p class="textoPost">Me and mommy 💕💕</p>'+'</section>'+'</div>')
-let testePost = '<div class="post">'+
-'<section class="headerPost">'+
-'<img class="fotoUsuario" src="src/Pigmeu.jpg" alt="">'+
-'<h1 class="nomeUsuario">@Baby_Hipo</h1>'+
-'<button class="botao">...</button>'+
-'</section>'+
-'<img class="fotoPost" src="src/Mae&filho.png" alt="">'+
-'<section class="botoes">'+
-'<button class="botao"><img src="src/like.png" alt=""></button>'+
-'<button class="botao"><img src="src/coment.png" alt=""></button>'+
-'<button class="botao"><img src="src/send.png" alt=""></button>'+
-'</section>'+
-'<section class="areaTexto">'+
-'<p class="nomeUsuario">@Baby_Hipo</p>'+
-'<p class="textoPost">Me and mommy 💕💕</p></section>'+
-'</div>'
-// let parser = new DOMParser();
+// const nm = document.createTextNode("@novo.user")
+// //timeline.append('<div class="post">'+'<section class="headerPost">'+'<img class="fotoUsuario" src="src/Pigmeu.jpg" alt="">'+'<h1 class="nomeUsuario">'+nm+'</h1>'+'<button class="botao">...</button>'+'</section>'+'<img class="fotoPost" src="src/Mae&filho.png" alt="">'+'<section class="botoes">'+'<button class="botao"><img src="src/like.png" alt=""></button>'+'<button class="botao"><img src="src/coment.png" alt=""></button>'+'<button class="botao"><img src="src/send.png" alt=""></button>'+'</section>'+'<section class="areaTexto">'+'<p class="nomeUsuario">@Baby_Hipo</p>'+'<p class="textoPost">Me and mommy 💕💕</p>'+'</section>'+'</div>')
+// let testePost = '<div class="post">'+
+// '<section class="headerPost">'+
+// '<img class="fotoUsuario" src="src/Pigmeu.jpg" alt="">'+
+// '<h1 class="nomeUsuario">@Baby_Hipo</h1>'+
+// '<button class="botao">...</button>'+
+// '</section>'+
+// '<img class="fotoPost" src="src/Mae&filho.png" alt="">'+
+// '<section class="botoes">'+
+// '<button class="botao"><img src="src/like.png" alt=""></button>'+
+// '<button class="botao"><img src="src/coment.png" alt=""></button>'+
+// '<button class="botao"><img src="src/send.png" alt=""></button>'+
+// '</section>'+
+// '<section class="areaTexto">'+
+// '<p class="nomeUsuario">@Baby_Hipo</p>'+
+// '<p class="textoPost">Me and mommy 💕💕</p></section>'+
+// '</div>'
+// // let parser = new DOMParser();
 
-// let doc = new DOMParser().parseFromString(testePost, "text/html");
+// // let doc = new DOMParser().parseFromString(testePost, "text/html");
 
-let s = $.parseHTML(testePost)
-let ll = $.parseHTML(testePost)
-$('#timeline').append(ll)
-$('#timeline').append(s)
+// let s = $.parseHTML(testePost)
+// let ll = $.parseHTML(testePost)
+// $('#timeline').append(ll)
+// $('#timeline').append(s)
 
+window.addEventListener('DOMContentLoaded', e => {
+    e.preventDefault()
 
+    fetch('https://dummyjson.com/users')
+        .then(res => res.json())
+        .then( ({users}) => {
+            users.forEach( user => {
+                const u = `<div class="post">
+                <section class="headerPost">
+                <img class="fotoUsuario" src="${user.image}"alt="">
+                <h1 class="nomeUsuario">${user.username}</h1>
+                <button class="botao">...</button>
+                </section>
+                <img class="fotoPost" src="src/Mae&filho.png" alt="">
+                <section class="botoes">
+                <button class="botao"><img src="src/like.png" alt=""></button>
+                <button class="botao"><img src="src/coment.png" alt=""></button>
+                <button class="botao"><img src="src/send.png" alt=""></button>
+                </section>
+                <section class="areaTexto">
+                <p class="nomeUsuario">@Baby_Hipo</p>
+                <p class="textoPost">Me and mommy 💕💕</p>
+                </section>
+            </div>`
+                timeline.innerHTML += u
+            });
+        })
+})
