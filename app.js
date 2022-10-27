@@ -80,8 +80,11 @@ window.addEventListener('DOMContentLoaded', e => {
     fetch('https://dummyjson.com/users')
         .then(res => res.json())
         .then( ({users}) => {
-            users.forEach( user => {
-                const u = `<div class="post">
+            users.forEach(user => {
+                fetch('https://dummyjson.com/posts/'+user.id)
+                .then(res => res.json())
+                .then((post) =>{
+                        const u = `<div class="post">
                 <section class="headerPost">
                 <img class="fotoUsuario" src="${user.image}"alt="">
                 <h1 class="nomeUsuario">${user.username}</h1>
@@ -94,11 +97,15 @@ window.addEventListener('DOMContentLoaded', e => {
                 <button class="botao"><img src="src/send.png" alt=""></button>
                 </section>
                 <section class="areaTexto">
-                <p class="nomeUsuario">@Baby_Hipo</p>
-                <p class="textoPost">Me and mommy 💕💕</p>
+                <p class="nomeUsuario">${user.username}</p>
+                <p class="textoPost">${post.body}</p>
                 </section>
             </div>`
                 timeline.innerHTML += u
+            }); 
+                
+
             });
+                
         })
-})
+    })
