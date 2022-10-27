@@ -10,3 +10,4 @@ Pendente:
 - Fazer perfil dos usúarios
 - Alterar imagem das postagens
 - Add link aos usernames das postagens
+- Fazer versão mobile
