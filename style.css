@@ -36,6 +36,7 @@ header{
 }
 .search{
     position: relative;
+    margin-left: 90px;
 }
 .search span{
     position: absolute;
@@ -59,8 +60,6 @@ input::placeholder{
     background-color: rgba(255, 255, 255, 0.5);
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     transition: 0.5s;
-
-
 }
 .search input:focus{
     outline: none;
@@ -75,7 +74,7 @@ input::placeholder{
     font-family: 'Kanit', sans-serif;
     
 }
-.perfil img{
+.fotoHeader{
     margin-right: 10px;
     margin-left: 15px;
     height: 50px;

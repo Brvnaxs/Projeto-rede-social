@@ -66,4 +66,8 @@ window.addEventListener('DOMContentLoaded', e => {
         usuario.setAttribute('src', `${user.image}`)
     });
 
+const like = document.getElementById('like')
+like.addEventListener('click', () =>{
+    like.style.Color = 'purple'
+})
                 
