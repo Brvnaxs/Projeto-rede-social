@@ -34,6 +34,21 @@ header{
     font-family: 'Kanit', sans-serif;
     font-size: 24px;
 }
+.search{
+    position: relative;
+}
+.search span{
+    position: absolute;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+span img{
+    height: 25px;
+    width: 25px;
+}
+input::placeholder{
+    padding-left: 30px;
+}
 .search input{
     height: 40px;
     width: 200px;
@@ -41,7 +56,7 @@ header{
     border: none;
     padding-left: 10px;
     color: #C1B0B3;
-    opacity: 0.5;
+    background-color: rgba(255, 255, 255, 0.5);
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     transition: 0.5s;
 
@@ -66,7 +81,6 @@ header{
     height: 50px;
     width: 50px;
     border-radius: 50px;
-    border: 3px solid #FDABB5;
 }
 
 /*Novo estilo:*/
@@ -85,7 +99,7 @@ header{
     height: 50px;
     width: 50px;
     border-radius: 50px;
-    border: #E70073 solid 2px;
+    border: #E70073 solid 3px;
 }
 .nomeUsuario{
     font-family: 'Kanit', sans-serif;
@@ -141,3 +155,51 @@ header{
     flex-wrap: wrap;
     flex-grow: 1;
 }
+
+/*testes*/
+.sesaoComentarios{
+    display: flex;
+    padding: 5px;
+    border-top: solid 1px grey;
+    width: 100%;
+    flex-direction: row;
+}
+.sesaoComentarios img{
+    height: 40px;
+    width: 40px;
+    border-radius: 40px;
+    border: #E70073 solid 1px;
+}
+.sesaoComentarios h3 {
+    font-family: 'Kanit', sans-serif;
+    font-size: 15px;
+}
+.sesaoComentarios p{
+    font-size: 10px;
+    font-family: 'Kanit', sans-serif;
+}
+
+.destaque{
+    display: flex;
+    flex-direction: row;
+    height: 90px;
+    width: 450px;
+    align-self: center;
+    border-radius: 23px;
+    background-color: #ffff;
+    justify-content: space-between;
+    align-items: center;
+    padding: 7px;
+    font-family: 'Kanit', sans-serif;
+    font-weight: 700;
+    margin-bottom: 45px;
+}
+.userPrincipal{
+    display: flex;
+    flex-direction: row;
+    margin: 4px;
+}
+.userPrincipal p{
+    margin-left: 5px;
+}
+
