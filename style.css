@@ -148,7 +148,6 @@ input::placeholder{
     display: flex;
     margin: 50px;
     width: 90%;
-    
     flex-direction: column;
     align-self: center;
     flex-wrap: wrap;
@@ -201,4 +200,5 @@ input::placeholder{
 .userPrincipal p{
     margin-left: 5px;
 }
+
 

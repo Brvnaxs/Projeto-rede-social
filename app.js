@@ -10,24 +10,28 @@ window.addEventListener('DOMContentLoaded', e => {
                 fetch('https://dummyjson.com/posts/'+user.id)
                 .then(res => res.json())
                 .then((posts) =>{
-                        const postagem = `<div class="post">
-                <section class="headerPost">
-                <img class="fotoUsuario" src="${user.image}"alt="">
-                <h1 class="nomeUsuario">${user.username}</h1>
-                <button class="botao">...</button>
-                </section>
-                <img class="fotoPost" src="src/Mae&filho.png" alt="">
-                <section class="botoes">
-                <button class="botao"><img src="src/like.png" alt=""></button>
-                <button class="botao"><img src="src/coment.png" alt=""></button>
-                <button class="botao"><img src="src/send.png" alt=""></button>
-                </section>
-                <section class="areaTexto">
-                <p class="nomeUsuario">${user.username}</p>
-                <p class="textoPost">${posts.body}</p>
-                </section>
-            </div>`
-                timeline.innerHTML += postagem
+                        fetch('https://jsonplaceholder.typicode.com/photos/'+user.id)
+                        .then(res => res.json())
+                        .then((photo)=>{
+                            const postagem = `<div class="post">
+                            <section class="headerPost">
+                            <img class="fotoUsuario" src="${user.image}"alt="">
+                            <h1 class="nomeUsuario">${user.username}</h1>
+                            <button class="botao">...</button>
+                            </section>
+                            <img class="fotoPost" src="${photo.url}" alt="">
+                            <section class="botoes">
+                            <button class="botao"><img src="src/like.png" alt=""></button>
+                            <button class="botao"><img src="src/coment.png" alt=""></button>
+                            <button class="botao"><img src="src/send.png" alt=""></button>
+                            </section>
+                            <section class="areaTexto">
+                            <p class="nomeUsuario">${user.username}</p>
+                            <p class="textoPost">${posts.body}</p>
+                            </section>
+                            </div>`
+                            timeline.innerHTML += postagem
+                        })
             }); 
                 
 
@@ -36,13 +40,15 @@ window.addEventListener('DOMContentLoaded', e => {
         })
     })
 
-    // for(var i = 1; i < 3; i++){
+    // for(var i = 1; i <= 3; i++){
     //     fetch('https://dummyjson.com/users/'+i)
     //     .then(res => res.json())
-    //     .then((user) => {
-    //        var usuario = document.querySelector(`#user${i}`)
-    //         usuario.setAttribute('src', `${user.image}`)
+    //     .then((users) => {
+    //        var url = users.image
+    //        var usuario = document.getElementById(`user${i}`)
+    //        usuario.setAttribute('src', url)
     //     })
+        
     // }
     
     fetch('https://dummyjson.com/users/1')
@@ -66,8 +72,7 @@ window.addEventListener('DOMContentLoaded', e => {
         usuario.setAttribute('src', `${user.image}`)
     });
 
-const like = document.getElementById('like')
-like.addEventListener('click', () =>{
-    like.style.Color = 'purple'
+const like = document.getElementById("like")
+like.addEventListener('click', ()=>{
+    
 })
-                

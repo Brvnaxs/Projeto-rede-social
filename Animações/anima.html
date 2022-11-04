@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        body{
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .baloes{
+            display: flex;
+            animation-name: likeBalao;
+            animation-duration: 3s;
+            margin-bottom: -1000px;
+            visibility: hidden;
+        }
+        .b1{
+            align-self: flex-start;
+            
+        }
+        .b2{
+            align-self: center;
+            margin-top: 30px;
+        }
+        .b3{
+            align-self: baseline;
+        }
+        .b4{
+            align-self: flex-end;
+        }
+        @keyframes likeBalao{
+            from{ 
+                margin-top: 0px;
+                margin-bottom: -100%;
+                visibility: visible;
+        }
+    
+        25%{
+        margin-bottom: 25%;
+        }
+        75%{
+        margin-top: 10%;
+        }
+        to{
+        margin-top: -100%;
+        margin-bottom: 0px;
+        }
+        }
+    </style>
+    <div class="baloes">
+        <img class="b1" src="../src/like.png" alt="">
+        <img class="b2" src="../src/like.png" alt="">
+        <img class="b3" src="../src/like.png" alt="">
+        <img class="b4" src="../src/like.png" alt="">
+    </div>
+</body>
+</html>
