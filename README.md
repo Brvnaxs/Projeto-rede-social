@@ -6,8 +6,8 @@ Template: https://www.figma.com/file/XgDHt6VRhAIeL20NaiekEh/ATIVIDADE---REDE-SOC
 Site: https://brvnaxs.github.io/THE-BALLOON-PROJECT/
 
 Pendente:
-- Add comentários nas postagens.
+- Add comentários nas postagens
 - Fazer perfil dos usúarios
-- Alterar imagem das postagens
+- Alterar imagem das postagens ✅
 - Add link aos usernames das postagens
 - Fazer versão mobile
