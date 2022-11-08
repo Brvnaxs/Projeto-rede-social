@@ -100,6 +100,7 @@ input::placeholder{
     border-radius: 50px;
     border: #E70073 solid 3px;
 }
+
 .nomeUsuario{
     font-family: 'Kanit', sans-serif;
     font-size: 15px;
@@ -225,3 +226,11 @@ input::placeholder{
     background: none;
     border: none;
 }
+a{
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
+}
+a:hover{
+    scale: 1.2;
+   }

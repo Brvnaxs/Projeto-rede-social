@@ -16,7 +16,7 @@ window.addEventListener('DOMContentLoaded', e => {
                             const postagem = `<div class="post">
                             <section class="headerPost">
                             <img class="fotoUsuario" src="${user.image}"alt="">
-                            <h1 class="nomeUsuario">${user.username}</h1>
+                            <a href="./Perfil/index.html"><h1 class="nomeUsuario">${user.username}</h1></a>
                             <button class="botao">...</button>
                             </section>
                             <img class="fotoPost" src="${photo.url}" alt="">
@@ -31,8 +31,8 @@ window.addEventListener('DOMContentLoaded', e => {
                             </section>
                             </div>`
                             timeline.innerHTML += postagem
-                            var elem = document.querySelectorAll('.like')
-                            elem.forEach((i)=>{
+                            var like = document.querySelectorAll('.like')
+                            like.forEach((i)=>{
                                 i.addEventListener('click', ()=>{
                                     i.classList.remove('botao')
                                     i.classList.add('Anima')
@@ -41,6 +41,12 @@ window.addEventListener('DOMContentLoaded', e => {
                                     i.classList.remove('Anima')
                                     i.classList.add('botao')
                                 });
+                            })
+                            const linkPerfil = document.querySelectorAll('.nomeUsuario')
+                            linkPerfil.forEach((i)=>{
+                                i.addEventListener('click', ()=>{
+                                    localStorage.id = user.id
+                                })
                             })
                             
 
