@@ -9,5 +9,6 @@ Pendente:
 - Add comentários nas postagens
 - Fazer perfil dos usúarios
 - Alterar imagem das postagens ✅
+- Add animação ao botão de like ✅
 - Add link aos usernames das postagens
 - Fazer versão mobile
