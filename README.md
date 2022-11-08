@@ -12,3 +12,4 @@ Pendente:
 - Add animação ao botão de like ✅
 - Add link aos usernames das postagens ✅
 - Fazer versão mobile
+- Filtrar perfis na barra de pesquisa
