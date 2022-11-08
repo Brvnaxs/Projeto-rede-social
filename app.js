@@ -21,7 +21,7 @@ window.addEventListener('DOMContentLoaded', e => {
                             </section>
                             <img class="fotoPost" src="${photo.url}" alt="">
                             <section class="botoes">
-                            <button class="botao"><img src="src/like.png" alt=""></button>
+                            <button class="like botao"><img src="src/like.png" alt=""></button>
                             <button class="botao"><img src="src/coment.png" alt=""></button>
                             <button class="botao"><img src="src/send.png" alt=""></button>
                             </section>
@@ -31,10 +31,22 @@ window.addEventListener('DOMContentLoaded', e => {
                             </section>
                             </div>`
                             timeline.innerHTML += postagem
+                            var elem = document.querySelectorAll('.like')
+                            elem.forEach((i)=>{
+                                i.addEventListener('click', ()=>{
+                                    i.classList.remove('botao')
+                                    i.classList.add('Anima')
+                                });
+                                    i.addEventListener('animationend', ()=>{
+                                    i.classList.remove('Anima')
+                                    i.classList.add('botao')
+                                });
+                            })
+                            
+
+                            
                         })
             }); 
-                
-
             });
                 
         })
@@ -72,7 +84,4 @@ window.addEventListener('DOMContentLoaded', e => {
         usuario.setAttribute('src', `${user.image}`)
     });
 
-const like = document.getElementById("like")
-like.addEventListener('click', ()=>{
-    
-})
+   

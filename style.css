@@ -200,5 +200,28 @@ input::placeholder{
 .userPrincipal p{
     margin-left: 5px;
 }
+@keyframes likeBalao{
+    from{ 
+        margin-top: 0px;
+        margin-bottom: -100%;
+        visibility: visible;
+        }
+        25%{
+        margin-bottom: 25%;
+        }
+        75%{
+        margin-top: 10%;
+        }
+        to{
+        margin-top: -100%;
+        margin-bottom: 0px;
+        }
+}
 
-
+.Anima{
+    animation-name: likeBalao;
+    animation-duration: 3s;
+    position: absolute;
+    background: none;
+    border: none;
+}
