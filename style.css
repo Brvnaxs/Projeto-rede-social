@@ -158,10 +158,13 @@ input::placeholder{
 /*testes*/
 .sesaoComentarios{
     display: flex;
-    padding: 5px;
+    width: 90%;
+    flex-direction: row;
+    align-self: center;
+}
+.comentario{
     border-top: solid 1px grey;
     width: 100%;
-    flex-direction: row;
 }
 .sesaoComentarios img{
     height: 40px;
@@ -174,7 +177,7 @@ input::placeholder{
     font-size: 15px;
 }
 .sesaoComentarios p{
-    font-size: 10px;
+    font-size: 15px;
     font-family: 'Kanit', sans-serif;
 }
 

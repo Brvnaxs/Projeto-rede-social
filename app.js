@@ -16,7 +16,7 @@ window.addEventListener('DOMContentLoaded', e => {
                             const postagem = `<div class="post">
                             <section class="headerPost">
                             <img class="fotoUsuario" src="${user.image}"alt="">
-                            <a href="./Perfil/index.html"><h1 class="nomeUsuario">${user.username}</h1></a>
+                            <a href="./Perfil/index.html" class="link" data-id="${user.id}"><h1 class="nomeUsuario">${user.username}</h1></a>
                             <button class="botao">...</button>
                             </section>
                             <img class="fotoPost" src="${photo.url}" alt="">
@@ -42,14 +42,11 @@ window.addEventListener('DOMContentLoaded', e => {
                                     i.classList.add('botao')
                                 });
                             })
-                            const linkPerfil = document.querySelectorAll('.nomeUsuario')
-                            linkPerfil.forEach((i)=>{
-                                i.addEventListener('click', ()=>{
-                                    localStorage.id = user.id
-                                })
+                            const link = document.querySelector(".link");
+                            link.addEventListener('click', ()=>{
+                                const dataId = link.getAttribute("data-id")
+                                localStorage.setItem('id',dataId)
                             })
-                            
-
                             
                         })
             }); 

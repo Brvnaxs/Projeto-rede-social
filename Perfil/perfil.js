@@ -1,7 +1,7 @@
-
+const id = localStorage.getItem('id')
 window.addEventListener('DOMContentLoaded', e =>{
     e.preventDefault()
-    fetch('https://dummyjson.com/users/'+localStorage.id)
+    fetch('https://dummyjson.com/users/'+id)
     .then(res => res.json())
     .then((user)=>{
         const foto = document.querySelector('.fotoPerfil')
@@ -15,7 +15,7 @@ window.addEventListener('DOMContentLoaded', e =>{
         idade.innerHTML = user.age
         cidade.innerHTML = user.address.city
     });
-    fetch('https://dummyjson.com/quotes/'+localStorage.id)
+    fetch('https://dummyjson.com/quotes/'+id)
     .then(res => res.json())
     .then((frase)=>{
         const descricao = document.querySelector('.descricao')
@@ -25,5 +25,6 @@ window.addEventListener('DOMContentLoaded', e =>{
 
 const voltarReseta = document.querySelector('.voltar')
 voltarReseta.addEventListener('click', ()=>{
-    localStorage.removeItem('id');
+    localStorage.clear();
+    window.history.back()
 })
