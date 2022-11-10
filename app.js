@@ -1,4 +1,3 @@
-
 const timeline = document.querySelector('#timeline')
 window.addEventListener('DOMContentLoaded', e => {
     e.preventDefault()
@@ -13,40 +12,53 @@ window.addEventListener('DOMContentLoaded', e => {
                         fetch('https://jsonplaceholder.typicode.com/photos/'+user.id)
                         .then(res => res.json())
                         .then((photo)=>{
-                            const postagem = `<div class="post">
-                            <section class="headerPost">
-                            <img class="fotoUsuario" src="${user.image}"alt="">
-                            <a href="./Perfil/index.html" class="link" data-id="${user.id}"><h1 class="nomeUsuario">${user.username}</h1></a>
-                            <button class="botao">...</button>
-                            </section>
-                            <img class="fotoPost" src="${photo.url}" alt="">
-                            <section class="botoes">
-                            <button class="like botao"><img src="src/like.png" alt=""></button>
-                            <button class="botao"><img src="src/coment.png" alt=""></button>
-                            <button class="botao"><img src="src/send.png" alt=""></button>
-                            </section>
-                            <section class="areaTexto">
-                            <p class="nomeUsuario">${user.username}</p>
-                            <p class="textoPost">${posts.body}</p>
-                            </section>
-                            </div>`
-                            timeline.innerHTML += postagem
-                            var like = document.querySelectorAll('.like')
-                            like.forEach((i)=>{
-                                i.addEventListener('click', ()=>{
-                                    i.classList.remove('botao')
-                                    i.classList.add('Anima')
-                                });
-                                    i.addEventListener('animationend', ()=>{
-                                    i.classList.remove('Anima')
-                                    i.classList.add('botao')
-                                });
-                            })
-                            const link = document.querySelector(".link");
-                            link.addEventListener('click', ()=>{
-                                const dataId = link.getAttribute("data-id")
-                                localStorage.setItem('id',dataId)
-                            })
+                                fetch('https://dummyjson.com/comments/'+user.id)
+                                .then(res => res.json())
+                                .then((comment) => {
+                                    const postagem = `<div class="post">
+                                    <section class="headerPost">
+                                    <img class="fotoUsuario" src="${user.image}"alt="">
+                                    <a href="./Perfil/index.html" class="link" data-id="${user.id}"><h1 class="nomeUsuario">${user.username}</h1></a>
+                                    <button class="botao">...</button>
+                                    </section>
+                                    <img class="fotoPost" src="${photo.url}" alt="">
+                                    <section class="botoes">
+                                    <button class="like botao"><img src="src/like.png" alt=""></button>
+                                    <button class="botao"><img src="src/coment.png" alt=""></button>
+                                    <button class="botao"><img src="src/send.png" alt=""></button>
+                                    </section>
+                                    <section class="areaTexto">
+                                    <p class="nomeUsuario">${user.username}</p>
+                                    <p class="textoPost">${posts.body}</p>
+                                    </section>
+                                    <div class="sesaoComentarios">
+                                                    <div class="comentario">
+                                                        <h3>@${comment.user.username}</h3>
+                                                        <p>${comment.body}</p>
+                                                    </div>
+                                                </div>
+                                    </div>`
+                                    timeline.innerHTML += postagem
+                                    var like = document.querySelectorAll('.like')
+                                    like.forEach((i)=>{
+                                        i.addEventListener('click', ()=>{
+                                            i.classList.remove('botao')
+                                            i.classList.add('Anima')
+                                        });
+                                            i.addEventListener('animationend', ()=>{
+                                            i.classList.remove('Anima')
+                                            i.classList.add('botao')
+                                        });
+                                    })
+                                    const link = document.querySelectorAll(".link");
+                                    link.forEach(i =>{
+                                        i.addEventListener('click', ()=>{
+                                            const dataId = i.getAttribute("data-id")
+                                            localStorage.setItem('id',dataId)
+                                        })
+                                    })
+                                })
+                            
                             
                         })
             }); 
@@ -86,5 +98,3 @@ window.addEventListener('DOMContentLoaded', e => {
         var usuario = document.getElementById('user3')
         usuario.setAttribute('src', `${user.image}`)
     });
-
-   
