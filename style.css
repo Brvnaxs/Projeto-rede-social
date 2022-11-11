@@ -156,7 +156,7 @@ input::placeholder{
 }
 
 /*testes*/
-.sesaoComentarios{
+.sessaoComentarios{
     display: flex;
     width: 90%;
     flex-direction: row;
@@ -166,17 +166,17 @@ input::placeholder{
     border-top: solid 1px grey;
     width: 100%;
 }
-.sesaoComentarios img{
+.sessaoComentarios img{
     height: 40px;
     width: 40px;
     border-radius: 40px;
     border: #E70073 solid 1px;
 }
-.sesaoComentarios h3 {
+.sessaoComentarios h3 {
     font-family: 'Kanit', sans-serif;
     font-size: 15px;
 }
-.sesaoComentarios p{
+.sessaoComentarios p{
     font-size: 15px;
     font-family: 'Kanit', sans-serif;
 }

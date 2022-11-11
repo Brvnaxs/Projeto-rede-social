@@ -31,7 +31,7 @@ window.addEventListener('DOMContentLoaded', e => {
                                     <p class="nomeUsuario">${user.username}</p>
                                     <p class="textoPost">${posts.body}</p>
                                     </section>
-                                    <div class="sesaoComentarios">
+                                    <div class="sessaoComentarios">
                                                     <div class="comentario">
                                                         <h3>@${comment.user.username}</h3>
                                                         <p>${comment.body}</p>

@@ -1,0 +1,33 @@
+@media screen and (max-width: 720px){
+    body{
+        display: flex;
+        width: 100vw;
+        padding: 0%;
+    }
+    header{
+        display: flex;
+        min-width: 720px;
+        padding-top: 18px;
+        padding-right: 0%;
+        margin-right: 0%;
+        justify-content: space-between;
+    }
+    .perfil p{
+        display: none;
+    }
+    .fotoHeader{
+        display: none;
+    }
+    .timeline{
+      align-self: center;
+    }
+    .search input{
+        width: 150px;
+    }
+    .logo{
+        padding-right: 0%;
+    }
+    .logo h1{
+        font-size: 15px;
+    }
+} 
