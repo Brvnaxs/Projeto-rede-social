@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,12 +11,13 @@
     <link rel="stylesheet" href="mobile.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Alumni+Sans+Pinstripe&family=Kanit&family=Raleway:wght@500&display=swap');
-   </style>
-   <!-- Include jQuery -->
-  <script src="https://code.jquery.com/jquery-3.6.0.js">
-</script>
+    </style>
+    <!-- Include jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js">
+    </script>
     <title> THE BALLOON</title>
 </head>
+
 <body>
     <header>
         <!--INICIO LOGO-->
@@ -36,10 +38,27 @@
         <div class="perfil">
             <p>SEJA BEM-VINDO, PIGMEU</p>
             <img class="fotoHeader" src="src/hipopotamo-pigmeu.jpg" alt="">
-            <img id="menu" src="src/menuMobile.png" alt="">
         </div>
         <!--FIM PERFIL-->
+
     </header>
+    <input type="checkbox" id="menu">
+    <label for="menu">
+        <img src="src/hamburger.png" alt="">
+    </label>
+    <nav>
+        <ul>
+            <li>HOME</li>
+            <li>PERFIL</li>
+            <li>CHAT</li>
+            <li>CONFIGURAÇÕES</li>
+            <li>SOBRE</li>
+        </ul>
+    </nav>
+    <section class="corpo">
+    <div class="baloes1">
+        <img src="src/animaçao.png" alt="">
+    </div>
     <section id="timeline">
         <div class="destaque">
             <div class="userPrincipal">
@@ -53,29 +72,35 @@
             </div>
         </div>
         <div class="post">
-                <section class="headerPost">
+            <section class="headerPost">
                 <img class="fotoUsuario" src="src/hipopotamo-pigmeu.jpg" alt="">
                 <h1 class="nomeUsuario">BabyHipo</h1>
                 <button class="botao">...</button>
-                </section>
-                <img class="fotoPost" src="src/Mae&filho.png" alt="">
-                <section class="botoes">
-                <button class="like botao"><img src="src/like.png" alt=""></button>
+            </section>
+            <img class="fotoPost" src="src/Mae&filho.png" alt="">
+            <section class="botoes">
+                <img src="src/like.png" class="like botao" alt="">
                 <button class="botao"><img src="src/coment.png" alt=""></button>
                 <button class="botao"><img src="src/send.png" alt=""></button>
-                </section>
-                <section class="areaTexto">
+            </section>
+            <section class="areaTexto">
                 <p class="nomeUsuario">BabyHipo</p>
                 <p class="textoPost">Me and mommy 💕💕</p>
-                </section>
-                <div class="sessaoComentarios">
-                    <div class="comentario">
-                        <h3>CapivaraCapivara</h3>
-                        <p>Que foto legal!</p>
-                    </div>
+            </section>
+            <div class="sessaoComentarios">
+                <div class="comentario">
+                    <h3> <font color="black">@Capivara</font> Que foto legal!</h3>
                 </div>
             </div>
+            <div class="mais-opcoes">
+                <img src="src/camera.png" alt="">
+                <img src="src/salvar.png" alt="">
+            </div>
+        </div>
     </section>
+    
+</section>
     <script src="app.js"></script>
 </body>
+
 </html>

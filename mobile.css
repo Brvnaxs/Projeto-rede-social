@@ -1,33 +1,40 @@
-@media screen and (max-width: 720px){
-    body{
-        display: flex;
-        width: 100vw;
-        padding: 0%;
-    }
-    header{
-        display: flex;
-        min-width: 720px;
-        padding-top: 18px;
-        padding-right: 0%;
-        margin-right: 0%;
-        justify-content: space-between;
-    }
-    .perfil p{
-        display: none;
-    }
-    .fotoHeader{
-        display: none;
-    }
-    .timeline{
-      align-self: center;
-    }
-    .search input{
-        width: 150px;
-    }
-    .logo{
-        padding-right: 0%;
-    }
-    .logo h1{
-        font-size: 15px;
-    }
-} 
+input[type="checkbox"]{
+    display: none;
+}
+nav{
+   background-color: rgba(160, 145, 145, 0.5);
+   width: 350px;
+   height: 100%;
+   color: white;
+    visibility: hidden;
+   position: fixed;
+   background-attachment: fixed;
+   align-self: flex-end;
+}
+input[type="checkbox"]:checked ~ nav{
+    visibility: visible;
+}
+label{
+    padding: 15px;
+    cursor: pointer;
+    position: fixed;
+    z-index: 1;
+   padding-top: 5px;
+   align-self: flex-end;
+}
+ul{
+    top: 70px;
+    position: absolute;
+    width: 90%;
+    padding-left: 10px;
+    background-attachment: fixed;
+}
+li{
+    font-size: 25px;
+    padding: 20px 5px;
+    font-family: 'Kanit', sans-serif;
+    border-bottom: white solid 2px;
+}
+li:hover{
+    transform: scale(1.1);
+}

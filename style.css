@@ -72,6 +72,7 @@ input::placeholder{
     color: #E70073;
     font-size: 15px;
     font-family: 'Kanit', sans-serif;
+    margin-right: 70px;
     
 }
 .fotoHeader{
@@ -81,7 +82,11 @@ input::placeholder{
     width: 50px;
     border-radius: 50px;
 }
-
+#menu{
+    height: 50px;
+    width: 50px;
+    margin-right: 10px;
+}
 /*Novo estilo:*/
 
 .post{
@@ -113,7 +118,7 @@ input::placeholder{
 .botao{
     background: none;
     border: none;
-    height: 50px;
+    height: 30px;
     color: #E70073;
     font-size: 40px;
     cursor: pointer;
@@ -158,27 +163,20 @@ input::placeholder{
 /*testes*/
 .sessaoComentarios{
     display: flex;
-    width: 90%;
-    flex-direction: row;
+    width: 100%;
+    
     align-self: center;
+    border-top: solid 1px rgb(208, 208, 208);
 }
 .comentario{
-    border-top: solid 1px grey;
+   padding: 10px;
     width: 100%;
 }
-.sessaoComentarios img{
-    height: 40px;
-    width: 40px;
-    border-radius: 40px;
-    border: #E70073 solid 1px;
-}
+
 .sessaoComentarios h3 {
     font-family: 'Kanit', sans-serif;
     font-size: 15px;
-}
-.sessaoComentarios p{
-    font-size: 15px;
-    font-family: 'Kanit', sans-serif;
+    color: #363636;
 }
 
 .destaque{
@@ -206,19 +204,16 @@ input::placeholder{
 }
 @keyframes likeBalao{
     from{ 
-        margin-top: 0px;
-        margin-bottom: -100%;
-        visibility: visible;
+        bottom: 0;
         }
         25%{
         margin-bottom: 25%;
         }
-        75%{
-        margin-top: 10%;
+        50%{
+            margin-top: -50%;
         }
         to{
-        margin-top: -100%;
-        margin-bottom: 0px;
+        margin-bottom: 100%;
         }
 }
 
@@ -228,6 +223,8 @@ input::placeholder{
     position: absolute;
     background: none;
     border: none;
+    visibility: visible;
+    bottom: 0%;
 }
 a{
     color: inherit;
@@ -237,3 +234,24 @@ a{
 a:hover{
     scale: 1.2;
    }
+
+.baloes1{
+    margin-top: -250px;
+    padding-left: 30px;
+    position: fixed;
+}
+.corpo{
+    display: flex;
+    flex-direction: row;
+    background-attachment: fixed;
+}
+.mais-opcoes{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.mais-opcoes img{
+    height: 40px;
+    width: 40px;
+    padding: 15px;
+}

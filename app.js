@@ -23,7 +23,7 @@ window.addEventListener('DOMContentLoaded', e => {
                                     </section>
                                     <img class="fotoPost" src="${photo.url}" alt="">
                                     <section class="botoes">
-                                    <button class="like botao"><img src="src/like.png" alt=""></button>
+                                    <img src="src/like.png" class="like botao" alt="">
                                     <button class="botao"><img src="src/coment.png" alt=""></button>
                                     <button class="botao"><img src="src/send.png" alt=""></button>
                                     </section>
@@ -33,23 +33,31 @@ window.addEventListener('DOMContentLoaded', e => {
                                     </section>
                                     <div class="sessaoComentarios">
                                                     <div class="comentario">
-                                                        <h3>@${comment.user.username}</h3>
-                                                        <p>${comment.body}</p>
+                                                        <h3><font color="black">@${comment.user.username}</font> ${comment.body}</h3>
                                                     </div>
                                                 </div>
+                                                <div class="mais-opcoes">
+                                                <img src="src/camera.png" alt="">
+                                                <img src="src/salvar.png" alt="">
+                                            </div>
                                     </div>`
                                     timeline.innerHTML += postagem
                                     var like = document.querySelectorAll('.like')
+                                    var baloes1 = document.querySelector('.baloes1')
+                                    
                                     like.forEach((i)=>{
                                         i.addEventListener('click', ()=>{
-                                            i.classList.remove('botao')
-                                            i.classList.add('Anima')
+                                            i.setAttribute('src', 'src/balloon.png') 
+                                            
+                                            baloes1.classList.add('Anima')
                                         });
-                                            i.addEventListener('animationend', ()=>{
-                                            i.classList.remove('Anima')
-                                            i.classList.add('botao')
-                                        });
+                                           
                                     })
+                                    baloes1.addEventListener('animationend', ()=>{
+                                        baloes1.classList.remove('Anima')
+                                        baloes1.classList.add('baloes1')
+                                    })
+
                                     const link = document.querySelectorAll(".link");
                                     link.forEach(i =>{
                                         i.addEventListener('click', ()=>{
