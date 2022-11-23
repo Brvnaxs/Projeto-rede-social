@@ -6,7 +6,7 @@ Template: https://www.figma.com/file/XgDHt6VRhAIeL20NaiekEh/ATIVIDADE---REDE-SOC
 Site: https://brvnaxs.github.io/Projeto-rede-social/
 
 Pendente:
-- Add comentários nas postagens
+- Add comentários nas postagens ✅
 - Fazer perfil dos usúarios ✅
 - Alterar imagem das postagens ✅
 - Add animação ao botão de like ✅
