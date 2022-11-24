@@ -6,13 +6,14 @@ nav{
    width: 350px;
    height: 100%;
    color: white;
-    visibility: hidden;
+   right: -350px;
    position: fixed;
    background-attachment: fixed;
    align-self: flex-end;
+   transition: all 0.3s;
 }
 input[type="checkbox"]:checked ~ nav{
-    visibility: visible;
+    right: 0;
 }
 label{
     padding: 15px;
