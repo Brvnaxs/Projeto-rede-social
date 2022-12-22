@@ -9,7 +9,7 @@ body{
 header{
     position: sticky;
     top: 0;
-    height: 3.37 rem;
+    height: 3.37rem;
     width: 100%;
     display: flex;
     align-items: center;
@@ -83,8 +83,8 @@ input::placeholder{
     border-radius: 50px;
 }
 #menu{
-    height: 3.12 rem;
-    width: 3.12 rem;
+    height: 3.12rem;
+    width: 3.12rem;
     margin-right: 10px;
 }
 /*Novo estilo:*/
