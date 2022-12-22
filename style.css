@@ -9,7 +9,7 @@ body{
 header{
     position: sticky;
     top: 0;
-    height: 54px;
+    height: 3.37 rem;
     width: 100%;
     display: flex;
     align-items: center;
