@@ -9,7 +9,7 @@ body{
 header{
     position: sticky;
     top: 0;
-    height: 3.37rem;
+    height: 3rem;
     width: 100%;
     display: flex;
     align-items: center;
@@ -26,8 +26,8 @@ header{
     flex-direction: row;
 }
 .logo img{
-    height: 60px;
-    width: 60px;
+    height: 2.5rem;
+    width: 2.5rem;
 }
 .logo h1{
     color: white;
@@ -83,8 +83,8 @@ input::placeholder{
     border-radius: 50px;
 }
 #menu{
-    height: 3.12rem;
-    width: 3.12rem;
+    height: 2rem;
+    width: 2rem;
     margin-right: 10px;
 }
 /*Novo estilo:*/
