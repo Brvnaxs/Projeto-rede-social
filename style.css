@@ -70,7 +70,7 @@ input::placeholder{
     display: flex;
     flex-direction: row;
     color: #E70073;
-    font-size: 1rem;
+    font-size: 0.625rem;
     font-family: 'Kanit', sans-serif;
     margin-right: 70px;
     
